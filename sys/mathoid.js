@@ -35,6 +35,7 @@ class MathoidService {
             hash = origHash = res.body;
             // short-circuit if it's a no-cache request
             if (mwUtil.isNoCacheRequest(req)) {
+                console.log('**OOPS**');
                 return P.reject(new HTTPError({ status: 404 }));
             }
             // check the post storage
